@@ -1,73 +1,47 @@
-# Fastify Thumbnail Manager API
+# 💻 StackOverflow Clone (Next.js & Appwrite)
 
-A blazing fast RESTful API built with **Fastify** and **MongoDB**. This backend service provides secure user authentication and allows users to upload, manage, and delete image thumbnails.
+<div align="center">
+  A modern, fully functional Q&A platform inspired by StackOverflow. Built with Next.js, Appwrite, and Tailwind CSS.
+</div>
 
-## Features
+---
 
-- **User Authentication**: Secure registration and login using `bcryptjs`.
-- **Stateless Sessions**: Route protection via JSON Web Tokens (JWT).
-- **Account Recovery**: Generate and verify password reset tokens.
-- **File Uploads**: Efficient multipart file streaming to the local filesystem using `@fastify/multipart`.
-- **CRUD Operations**: Complete management of thumbnail metadata tied to specific users.
-- **Automated Cleanup**: Synchronized deletion of local files when database records are removed.
+## 🚀 Overview
 
-## Tech Stack
+This project is a full-stack web application that replicates the core functionalities of StackOverflow. It uses **Next.js** for seamless server-side rendering and routing, combined with **Appwrite** (via the Node.js SDK) to handle backend services like database management and user authentication. The user interface is highly responsive and styled using **Tailwind CSS**, supplemented by beautifully animated components from **Magic UI** and UI primitives.
 
-- **Framework**: Fastify
-- **Database**: MongoDB (via Mongoose)
-- **Authentication**: `@fastify/jwt`
+## ✨ Features
 
-## Getting Started
+- **Robust Authentication**: Secure user sign-up and log-in with email and password via Appwrite Auth.
+- **Questions & Answers**: Core Q&A functionality—users can ask questions, provide answers, and engage in discussions.
+- **Voting System**: Upvote and downvote functionality for both questions and answers to surface the best solutions.
+- **Comments & Discussions**: Threaded comments on specific posts for clarification and context.
+- **Rich Text & Markdown**: Full Markdown support for writing and formatting questions and code snippets effortlessly.
+- **Search Functionality**: Quickly find relevant questions and topics across the database.
+- **Theming**: Dark and Light mode support for better accessibility and user preference.
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router, TypeScript)
+- **Backend/BaaS:** [Appwrite](https://appwrite.io/) (Auth, Databases, Storage)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [Magic UI](https://magicui.design/) / Radix UI / Shadcn (via `components.json`)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 🚦 Getting Started
 
 ### Prerequisites
 
-- Node.js installed
-- A MongoDB Atlas account or local MongoDB instance
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/en/download/) (v16.14.0 or higher)
+- npm, yarn, or pnpm
+- An [Appwrite](https://appwrite.io/docs/installation) instance (Cloud or Self-Hosted, v1.0.0 or higher)
 
 ### Installation
 
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/professionaldev527/Fastify-Backend-JWT
-    cd /Fastify-Backend-JWT
-    ```
-
-2. Install dependencies:
-
-    ```bash
-    npm install
-    ```
-
-3. Create a `.env` file in the root directory and add the following variables:
-
-    ```env
-    PORT=4000
-    MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/31-fastify
-    JWT_SECRET=your_super_secret_key
-    ```
-
-4. Start the development server:
-    ```bash
-    npm run dev
-    ```
-    The server should now be running at `http://localhost:4000`.
-
-## API Endpoints
-
-### Auth Routes (`/api/auth`)
-
-- `POST /register` - Register a new user
-- `POST /login` - Authenticate a user and receive a JWT
-- `POST /forgot-password` - Generate a reset token
-- `POST /reset-password/:token` - Reset user password
-- `POST /logout` - Logout a user (Requires JWT)
-
-### Thumbnail Routes (`/api/thumbnail`) - _Requires JWT_
-
-- `POST /` - Upload a new thumbnail (multipart/form-data)
-- `GET /` - Get all thumbnails for the authenticated user
-- `GET /:id` - Get a specific thumbnail by ID
-- `PUT /:id` - Update thumbnail details
-- `DELETE /:id` - Delete a thumbnail and its associated image file
-- `DELETE /` - Delete all thumbnails for the authenticated user
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/professionaldev527/next.js-appwrite-stackoverflow.git](https://github.com/professionaldev527/next.js-appwrite-stackoverflow.git)
+   cd next.js-appwrite-stackoverflow
